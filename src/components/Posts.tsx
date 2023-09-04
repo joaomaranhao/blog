@@ -8,8 +8,8 @@ export const Posts = () => {
   return (
     <ul className="mt-6">
       {posts.map((post) => (
-        <li className="lg:mb-6 mb-4" key={post.id}>
-          <Link href={`/posts/${post.id}`}>
+        <li className="lg:mb-6 mb-4" key={post.slug}>
+          <Link href={`/posts/${post.slug}`}>
             <div className="bg-slate-200 dark:bg-slate-900 rounded-lg p-6 border-4 border-transparent hover:border-blue-600">
               <span className="text-3xl font-bold">{post.title}</span>
               <p className="mt-2 text-lg">{post.description}</p>

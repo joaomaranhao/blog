@@ -1,5 +1,5 @@
 type BlogPost = {
-  id: string;
+  slug: string;
   title: string;
   date: Date;
   description: string;
