@@ -29,20 +29,21 @@ export const Post = async ({ params }: { params: { slug: string } }) => {
     await getPostData(params.slug);
   return (
     <main>
-      <article className="prose prose-slate dark:prose-invert lg:prose-xl m-auto my-12">
+      <article className="prose prose-slate dark:prose-invert lg:prose-xl m-auto mb-12">
         {image ? (
-          <div className="h-64 w-full bg-gray-200 dark:bg-gray-800">
+          <div className="h-64 w-full bg-gray-200 dark:bg-gray-800 relative mb-8 mt-0">
             <Image
               src={image}
               alt={title}
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              className="rounded-t-lg"
+              sizes="(max-width: 768px) 100vw"
+              className="rounded-t-lg !mt-4"
             />
           </div>
         ) : null}
-        <h1>{title}</h1>
+        <h1 className="!my-8">{title}</h1>
         <p>
           {date.toLocaleDateString("en-GB", {
             dateStyle: "short",
