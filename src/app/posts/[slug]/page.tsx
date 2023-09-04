@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostData, getSortedPostsData } from "../../../../lib/posts";
 import Link from "next/link";
@@ -24,13 +25,23 @@ export const Post = async ({ params }: { params: { slug: string } }) => {
     return notFound();
   }
 
-  const { title, date, description, tags, contentHtml } = await getPostData(
-    params.slug
-  );
-
+  const { title, date, description, tags, image, contentHtml } =
+    await getPostData(params.slug);
   return (
     <main>
       <article className="prose prose-slate dark:prose-invert lg:prose-xl m-auto my-12">
+        {image ? (
+          <div className="h-64 w-full bg-gray-200 dark:bg-gray-800">
+            <Image
+              src={image}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+              className="rounded-t-lg"
+            />
+          </div>
+        ) : null}
         <h1>{title}</h1>
         <p>
           {date.toLocaleDateString("en-GB", {

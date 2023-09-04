@@ -21,6 +21,7 @@ export const getSortedPostsData = () => {
       date: matterResult.data.date,
       description: matterResult.data.description,
       tags: matterResult.data.tags,
+      image: matterResult.data.image,
       slug: slug,
     };
 
@@ -54,6 +55,7 @@ export const getPostData = async (slug: string) => {
     description: matterResult.data.description,
     tags: matterResult.data.tags,
     slug: slug,
+    image: matterResult.data.image,
     contentHtml,
   };
 

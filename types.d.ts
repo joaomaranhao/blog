@@ -4,4 +4,5 @@ type BlogPost = {
   date: Date;
   description: string;
   tags: string[];
+  image: string;
 };
