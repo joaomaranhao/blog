@@ -2,7 +2,7 @@
 title: Example
 date: 2023-09-04T21:20:56.104Z
 description: Example
-image: https://unsplash.com/photos/4K_x--J2Jbc
+image: /images/example.jpg
 ---
 
 iaiaiaiaa
