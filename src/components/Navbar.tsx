@@ -1,5 +1,11 @@
 import Image from "next/image";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaTwitch,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 export const Navbar = () => {
   return (
@@ -30,10 +36,22 @@ export const Navbar = () => {
             <FaLinkedinIn size={30} />
           </a>
           <a
-            className="hover:scale-110 ease-out duration-300 text-white"
+            className="mr-4 hover:scale-110 ease-out duration-300 text-white"
+            href="https://twitch.tv/joaofmaranhao"
+          >
+            <FaTwitch size={30} />
+          </a>
+          <a
+            className="mr-4 hover:scale-110 ease-out duration-300 text-white"
             href="https://www.twitter.com/joaofmaranhao"
           >
             <FaTwitter size={30} />
+          </a>
+          <a
+            className="hover:scale-110 ease-out duration-300 text-white"
+            href="https://www.youtube.com/@joaofmaranhao"
+          >
+            <FaYoutube size={30} />
           </a>
         </div>
       </div>
