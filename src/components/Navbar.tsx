@@ -4,7 +4,7 @@ import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 export const Navbar = () => {
   return (
     <nav className="bg-blue-700">
-      <div className="max-w-5xl m-auto flex justify-between items-center py-6">
+      <div className="max-w-5xl m-auto flex justify-between items-center p-6 lg:px-0">
         <div>
           <a href="/">
             <Image

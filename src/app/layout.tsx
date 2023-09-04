@@ -22,7 +22,7 @@ export default function RootLayout({
         }
       >
         <Navbar />
-        <div className="max-w-5xl m-auto">{children}</div>
+        <div className="max-w-5xl m-auto px-6 lg:px-0">{children}</div>
       </body>
     </html>
   );
