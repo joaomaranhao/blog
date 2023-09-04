@@ -1,10 +1,11 @@
 ---
 title: How I Used Python to Automate a Youtube Channel
 date: 2023-09-04
-description: The idea was to create a YouTube channel with replays of matches of a very popular game called “League of Legends”, fully automated.
+description: The idea was to create a YouTube channel with replays of matches of
+  a very popular game called “League of Legends”, fully automated.
 tags: "#python #youtube #automation"
+image: /images/channel.jpg
 ---
-
 When I started coding, the first thing I did to put my new knowledge into practice was to automate a process that was done every day at my job.
 
 I worked with video editing and, at least once a day, I had to download a media with the recordings to a backup server and then pull them to my machine to start editing. So, I decided to create a script that would do this.
@@ -29,11 +30,11 @@ Some sites make matches of professional players available for download. Replays 
 
 To automate the entire creation process, a few steps were necessary:
 
-- Enter the website, choose a match, get the match information and download the replay
-- Run replay and record screen
-- Edit the video
-- Create the thumbnail
-- Upload the video and thumbnail to Youtube and fill in information like title, description, and keywords
+* Enter the website, choose a match, get the match information and download the replay
+* Run replay and record screen
+* Edit the video
+* Create the thumbnail
+* Upload the video and thumbnail to Youtube and fill in information like title, description, and keywords
 
 ## Why Python?
 
@@ -47,7 +48,7 @@ I looked for some Javascript library that would help me to do this, but I was no
 
 Web scraping is a method of accessing any website and getting information.
 
-What I used to search for matches was [League of Graphs](https://www.leagueofgraphs.com/) and, through [this link](https://www.leagueofgraphs.com/replays/with-high- kda/grandmaster/sr-ranked), I can access a page with replays and filter my search, to get only matches with good players.
+What I used to search for matches was [League of Graphs](https://www.leagueofgraphs.com/) and, through \[this link](https://www.leagueofgraphs.com/replays/with-high- kda/grandmaster/sr-ranked), I can access a page with replays and filter my search, to get only matches with good players.
 
 The idea here was to take the first game and extract the information from this table.
 
@@ -77,11 +78,11 @@ The result is this:
 
 To simplify the creation of the video, I decided to record the game with OBS Studio. So I can add on-screen elements, which are superimposed at the start, without the need to edit or post-produce the video.
 
-With Python's _subprocess_ module, I run the _.bat_ file that opens the replay of the match.
+With Python's *subprocess* module, I run the *.bat* file that opens the replay of the match.
 
 PyAutoGUI is used to open OBS Studio and put the match to record.
 
-When the game is over, recording stops, and a _.mp4_ video file is saved to my local disk, ready to use.
+When the game is over, recording stops, and a *.mp4* video file is saved to my local disk, ready to use.
 
 ### Upload to Youtube
 
