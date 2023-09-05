@@ -3,21 +3,6 @@ import { notFound } from "next/navigation";
 import { getPostData, getSortedPostsData } from "../../../../lib/posts";
 import Link from "next/link";
 
-export const GenerateMetadata = ({ params }: { params: { slug: string } }) => {
-  const posts = getSortedPostsData();
-  const post = posts.find((post) => post.slug === params.slug);
-
-  if (!post) {
-    return {
-      title: "Post not found",
-    };
-  }
-
-  return {
-    title: post.title,
-  };
-};
-
 export const Post = async ({ params }: { params: { slug: string } }) => {
   const posts = getSortedPostsData();
   const post = posts.find((post) => post.slug === params.slug);
