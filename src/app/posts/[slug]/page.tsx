@@ -1,17 +1,19 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getPostData, getSortedPostsData } from "../../../../lib/posts";
+import { use } from "react";
 import Link from "next/link";
 
-export const Post = async ({ params }: { params: { slug: string } }) => {
+export const Post = ({ params }: { params: { slug: string } }) => {
   const posts = getSortedPostsData();
   const post = posts.find((post) => post.slug === params.slug);
   if (!post) {
     return notFound();
   }
 
-  const { title, date, description, tags, image, contentHtml } =
-    await getPostData(params.slug);
+  const { title, date, description, tags, image, contentHtml } = use(
+    getPostData(params.slug)
+  );
   return (
     <main>
       <article className="prose prose-slate dark:prose-invert lg:prose-xl m-auto mb-12">
