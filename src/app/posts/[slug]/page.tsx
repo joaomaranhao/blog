@@ -4,7 +4,7 @@ import { getPostData, getSortedPostsData } from "../../../../lib/posts";
 import { use } from "react";
 import Link from "next/link";
 
-export const Post = ({ params }: { params: { slug: string } }) => {
+export default function Post({ params }: { params: { slug: string } }) {
   const posts = getSortedPostsData();
   const post = posts.find((post) => post.slug === params.slug);
   if (!post) {
@@ -50,6 +50,4 @@ export const Post = ({ params }: { params: { slug: string } }) => {
       </article>
     </main>
   );
-};
-
-export default Post;
+}
